@@ -37,13 +37,13 @@ app.use(session({
 }));
 app.use(function (req, res, next) {
     if (!req.session.user && req.url.indexOf("admin/") > -1) {
-        res.redirect('/eternity/admin');
+        res.redirect('/admin');
     } else
         next();
 });
-app.use('/eternity', routes);
-app.use('/eternity/admin', admin);
-app.use('/eternity/love-record', loveRecord);
+app.use('/', routes);
+app.use('/admin', admin);
+app.use('/love-record', loveRecord);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
