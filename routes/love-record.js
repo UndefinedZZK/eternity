@@ -17,7 +17,7 @@ router.get('/says', function (req, res) {
         data.split("\n").map(function (i) {
             //最后一句
             if (i == "")
-                says.push("时间不停，爱你不止，携子之手，白头偕老");
+                says.push("永远爱你吖我的乎");
             else
                 says.push(i);
         });
